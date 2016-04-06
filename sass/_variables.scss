@@ -7,15 +7,22 @@ $leading: 1.5 * $font-size;                                    // 24 pixels
 // =================================================================================
 // Grid-specific variables.
 // =================================================================================
-$grid-width: 60px;                                             // 75 pixels
-$grid-gutter: $grid-width / 3;                                 // 25 pixels
+$grid-width: 60px;                                             // 60 pixels or 4.5vw
+$grid-gutter: $grid-width / 3;                                 // 20 pixels
 $color-grid-column: rgba(200, 0, 0, 0.2);
 $color-grid-baseline: rgba(56, 255, 255, 0.8);
 
 // =================================================================================
 // Body sizing.
 // =================================================================================
-$width-body: (9 * ($grid-width + $grid-gutter)) + $grid-width; // 975 pixels
+$width-body: 16 * ($grid-width + $grid-gutter); 			  // 1280 pixels
+
+// =================================================================================
+// Responsive sizing.
+// =================================================================================
+$width-large: 16 * ($grid-width + $grid-gutter);             // 1280 pixels
+$width-medium: (10 * ($grid-width + $grid-gutter))+ (2 * $grid-gutter);// 840 pixels
+$width-small: 7 * ($grid-width + $grid-gutter);              // 400 pixels
 
 // =================================================================================
 // The image `modular-grid.png` on line 18 below is used as a background image by

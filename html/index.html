@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UFO CartoDB</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="shortcut icon" href="http://cartodb.com/assets/favicon.ico" />	
+	<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+	<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+	<script type="text/javascript" src="../scripts/jquery-2.2.2.min.js" async></script>	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+
+<header>
+	<h1>UFO SIGHTINGS INDEX</h1>
+
+	<p>present a dataset that shows how people see and interpret <br>
+	unexplained phenomenon of daily life, which UFO and <br>
+	aliens could be the symbolic representatives that illustrate <br>
+	the idea.</p>
+</header>
+
+	<div id="first-modal-btn" class="first-modal-btn">
+		<img src="../img/modal-icon.png" alt="modal-icon">
+	</div>
+
+	<!--first modal-->
+	<div id="first-modal" class="first-modal">
+
+		<!--first modal content-->
+		<div class="first-modal-content">
+			<img src="../img/Hynek_scale.png" alt="modal-content">
+		</div>
+	</div>
+
+
+<div id="map" style="height: 100vh"></div>
+
+<div id="layer_selector" class="cartodb-infobox">
+    <ul>
+        <li id="l0" class="selected">All</li>
+        <li id="l1" >1</li>
+        <li id="l2" >2</li>
+        <li id="l3" >3</li>
+        <li id="l4" >4</li>     
+        <li id="l5" >5</li>        
+    </ul>
+</div>
+
+
+
+<footer></footer>
+
+
+
+     
+	<script type="text/javascript" src="../scripts/main-script.js" async></script>
+<!-- 	<script type="text/javascript" src="../scripts/app.js" async></script>
+ --></body>
+</html>

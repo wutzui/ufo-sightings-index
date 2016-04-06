@@ -2,6 +2,9 @@
 @import 'variables';
 @import 'grid';
 
+$icon-width-height: 0.4 * $grid-width;
+$menu-icon-height: 1 * $leading;
+
 #layer {
    margin: 0 auto;
    max-width: $width-body;
@@ -53,6 +56,49 @@ section {
    vertical-align: top;
 }
 
+section:nth-of-type(1),
+section:nth-of-type(4) {
+   max-width: $width-body;
+}
+
+section:nth-of-type(2) {
+   max-width: (4 * ($grid-width + $grid-gutter)) + $grid-width;
+}
+
+section:nth-of-type(3) {
+   max-width: (4 * ($grid-width + $grid-gutter)) + $grid-width;
+   padding-right: 0;
+}
+
+#layer_selector {
+   position: absolute;
+   top: 5 * $leading;
+   right: 20px;
+   padding: 0;
+   background-color: rgba(10, 10, 10, 0);
+   box-shadow: rgba(0, 0, 0, 0) 0 0 4px 2px; 
+   border: 0;
+}
+
+#layer_selector ul {  
+   padding: 0; 
+   margin: 0;
+   list-style-type: none;
+}
+      
+#layer_selector li {
+   margin-bottom: 0.5 * $leading;
+   text-align: center;
+   border-radius: $grid-gutter;
+   border: 1px solid #999;
+   padding: 0.6 * $grid-gutter;
+   font-family: "Helvetica", Arial;
+   font-size: 13px;
+   background-color: rgba(10, 10, 10, 0.6);
+   color: rgba(250, 250, 250, 1);
+   cursor: pointer;
+}
+
 ////////////
 
 header h1 {
@@ -62,13 +108,90 @@ header h1 {
    left: 100px;
 }
 
-iframe{
-   position: fixed;
-   top:0;
-   left: 0;
-   width: 100%;
-   height: 100%;
+header p {
+   position:fixed;   
+   top: 3 * $leading;
+   left: 100px;
+   color: rgb(255, 255, 255);
+   z-index: 2;
+   font-size: 13px;
 }
 
 
+// =================================================================================
+// first modal button.
+// =================================================================================
+.first-modal-btn {
+   float: right;
+   position: fixed;
+   left: 6 * ($grid-width + $grid-gutter);
+   width: $icon-width-height;
+   padding: 1 * $leading; 
+   z-index: 7;
+   cursor: pointer;
+}
 
+.first-modal-btn img {
+   height: $icon-width-height;
+}
+
+// =================================================================================
+// first modal content.
+// =================================================================================
+.first-modal {
+   display: none;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   // overflow: auto; // enable scroll if needed
+   background-color: rgba(242, 242, 242, 1);
+   z-index: 1000;
+}
+
+.first-modal-content {
+   margin-top: 5 * $leading;
+   margin-left: auto;
+   margin-right:auto;
+   width: 9 * ($grid-width + $grid-gutter);
+   @media screen and (max-width: $width-medium) {
+      width: 6 * ($grid-width + $grid-gutter);
+   }
+   @media screen and (max-width: $width-small) {
+      width: 5 * ($grid-width + $grid-gutter);
+   }
+}
+
+.first-modal-content h2 {
+   font-size: 0.75 * $leading;
+   font-weight: 700;
+   text-align: center;
+   line-height: 2.5 * $leading;
+}
+
+.first-modal-content p {
+   line-height: 1.2 * $leading;
+   
+   @media screen and (max-width: $width-medium) {
+      font-size: 0.64 * $leading;
+      line-height: 1 * $leading;
+   }
+   @media screen and (max-width: $width-small) {
+      font-size: 0.6 * $leading;
+      line-height: 1 * $leading;
+    }
+}
+
+.first-modal-content img {
+   position: absolute;
+   top: 0 * $leading;
+   width: 11 * ($grid-width + $grid-gutter);
+   left: 10 * $grid-gutter;
+   right: 2 * $grid-gutter;   
+}
+
+//set gap for line space.
+.gap {
+   height: 0.1 * $leading;
+}
